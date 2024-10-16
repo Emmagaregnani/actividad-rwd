@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: rgb(235, 235, 224);
+}
+
+h1, h2, h3, h4, p{
+    color: black;
+    font-family: "Dosis", sans-serif;
+}
+
+h1{
+    font-size: 3rem;
+    color:rgb(52, 72, 252);
+    font-family: "Dosis", sans-serif;
+}
+
+p{
+    font-size: 2rem;
+    color: black;
+    font-family: "Dosis", sans-serif;
+}
+
+header {
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1rem;
+  color: azure;
+}
+
+.home {
+    background-image: url(imagenes/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+/*    background-attachment: fixed;
+    background-position: center;
+/*    width: 100vw;
+    height: 100vh;*/
+}
+
+.home h1, .home p {
+    text-align: left;
+    padding: 1rem;
+    padding-left: 3rem;
+    color: azure;
+}
+
+.home h1{
+    padding-top: 5rem;
+    font-size: 3rem;
+}
+.home h3{
+    color: white;
+    font-size: 2rem;
+}
+
+.home p {
+    font-size: 1.5rem;
+}
+
+.fecha {
+    font-weight: 1000;
+    color:rgb(52, 72, 252);
+}
+
+.contenedor_boton{
+    text-align: left;
+    padding-top: 0.5rem;
+}
+
+.boton {
+    font-size: 1.5rem;
+    background-color: rgb(52, 72, 252);
+    padding: 10px;
+    margin: 60px;
+    color:white;
+    border: none;
+    border-radius: 5px;
+}
+
+.boton:hover{
+    background-color: azure;
+    color: black;
+    transition: all 0.5s;
+}
+
+footer {
+    font-family: "Quicksand", sans-serif;
+    text-align: right;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    color: black;
+    height: auto;
+}
+
+.intro {
+    height: 100vh;
+    font-size: 1rem;
+    display:grid;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-areas:
+    "titulo_intro titulo_intro" 
+    "contenedor_img texto";
+}
+
+.titulo_intro {
+    grid-area: titulo_intro;
+    padding: 1.5rem;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    padding-top:1.5rem;
+    row-gap: 1rem;
+    text-align: left;
+}
+
+.intro img {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+.contenedor_img{
+    grid-area: contenedor_img;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 100vh;
+}
+
+.contenedor_img img {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+}
+
+.foto1{
+    align-self: flex-start;
+}
+
+.foto2{
+    align-self: flex-end;
+}
+
+.texto{
+    grid-area: texto;
+    margin-right: 2rem;
+}
+
+.info_basica{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 0.1fr 1fr;
+    grid-template-areas: 
+    "titulo_info titulo_info titulo_info"
+    "div1 div2 div3";
+    padding: 2rem;
+    row-gap: 3rem;
+    column-gap: 3rem;
+}
+
+.titulo_info{
+    grid-area: titulo_info;
+}
+
+.div1{
+    grid-area: div1;
+}
+
+.div2{
+    grid-area: div2;
+}
+
+.div3{
+    grid-area: div3;
+}
+
+.boton_info{
+    background-color: rgb(52, 72, 252);
+    padding: 10px;
+    margin: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.boton_info:hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+.div1, .div2, .div3{
+    text-align: center;
+    line-height: 2rem;
+    padding-block: 4rem;
+    background-color: white;
+    padding: 2rem;
+    height: fit-content;
+}
+
+.div1 p, .div2 p, .div3 p{
+    font-size:1.5rem;
+}
+
+.info_basica h2{
+    text-align: center;  
+}
+
+.traza_movimientos{
+    max-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "izq_mov der_mov";
+}
+
+.traza_movimientos img {
+    max-height: 100vh;
+    object-fit: cover;
+}
+
+.izq_mov{
+    grid-area: izq_mov;
+    padding: 3rem;
+    text-align: left;
+    margin: auto 0;
+}
+
+.der_mov{
+    grid-area: der_mov;
+}
+
+.der_mov img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.maraton{
+    max-width: 100vw;
+    max-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "titulo_maraton titulo_maraton titulo_maraton"
+    "div1_maraton div2_maraton div3_maraton";
+    padding: 2rem;
+    column-gap: 3rem;
+}
+
+.titulo_maraton{
+    grid-area: titulo_maraton;
+    padding: 1.5rem;
+}
+
+.div1_maraton, .div2_maraton, .div3_maraton {
+    background-color: white;
+    padding-bottom: 2rem;
+    text-align: center;
+    height: fit-content;
+}
+
+.div1_maraton p, .div2_maraton p, .div3_maraton p{
+    font-size: 1.5rem;
+}
+
+.preguntas{
+    /*overflow: hidden;*/
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.preguntas div {
+    width: 50vw;
+    overflow: hidden;
+}
+
+.izq_preg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.der_preg{
+    max-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    padding: 2rem;
+    row-gap: 2.5rem;
+    text-align: center;
+}
+
+.texto_preg{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+
+@media all and (max-width: 667px){
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+
+    body {
+        max-width: 100vw;
+    }
+
+    .home{
+        margin: 0%;
+        width: 100%;
+        text-align: center;
+        background-position: center;
+    }
+
+    .intro{
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        min-height: fit-content;
+        /*
+        grid-template-columns: none;
+        grid-template-rows: 0.1fr 1fr 1fr;
+        grid-template-areas:
+        "titulo_intro"
+        "contenedor_img"
+        "texto";*/
+    }
+
+    .titulo_intro{
+        grid-area: titulo_intro;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .contenedor_img{
+        grid-area: contenedor_img;
+    }
+
+    .texto{
+        grid-area: texto;
+    }
+
+    .info_basica{
+        text-align: center;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 0.1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "titulo_info"
+        "div1"
+        "div2"
+        "div3";
+        padding: 2rem;
+        height: fit-content;
+        text-align: center;
+    
+    }
+
+    .traza_movimientos{
+        display: block;
+        background-image: url(imagenes/foto7.png);
+        background-repeat: no-repeat;
+        height:fit-content;
+        background-size: contain;
+    }
+    
+    .maraton{
+        display: flex;
+        flex-direction: column;
+        min-height: fit-content;
+
+
+    }
+    .preguntas{
+        display: flex;
+        flex-direction: column;
+        min-height: fit-content;
+        width: 100vw;
+
+
+    }
+
+}
+
